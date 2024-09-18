@@ -191,14 +191,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .filter(checkbox => checkbox.checked)
             .map(checkbox => checkbox.value);
 
-        const filteredProducts = products.filter(product => 
-            (product.nombre.toLowerCase().includes(searchTerm) ||
-            product.marca.toLowerCase().includes(searchTerm) ||
-            product.tipo.toLowerCase().includes(searchTerm)) &&
-            product.precio >= minPrice &&
-            product.precio <= maxPrice &&
-            (selectedTypes.length === 0 || selectedTypes.includes(product.tipo))
-        );
+        const filteredProducts = products.filter(product => {
+            const matchesSearch = product.nombre.toLowerCase().includes(searchTerm) ||
+                                  product.marca.toLowerCase().includes(searchTerm) ||
+                                  product.tipo.toLowerCase().includes(searchTerm);
+            const matchesPrice = product.precio >= minPrice && product.precio <= maxPrice;
+            const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.tipo);
+
+            return matchesSearch && matchesPrice && matchesType;
+        });
 
         displayProducts(filteredProducts);
     }
@@ -239,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
             priceRangeMin.value = priceRangeMax.value;
         }
         updatePriceLabels();
+        filterProducts();
     }
 
     // Mostrar todos los productos al cargar la página
@@ -249,6 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     applyFiltersButton.addEventListener('click', filterProducts);
     priceRangeMin.addEventListener('input', setMinMax);
     priceRangeMax.addEventListener('input', setMinMax);
+    typeCheckboxes.forEach(checkbox => checkbox.addEventListener('change', filterProducts));
 
     closeModal.addEventListener('click', hideModal);
     window.addEventListener('click', (event) => {
