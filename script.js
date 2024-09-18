@@ -17,50 +17,143 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Datos de ejemplo (en una aplicación real, estos vendrían de una base de datos o API)
     const products = [
-        { 
-            id: 1, 
-            type: 'UPS', 
-            brand: 'APC', 
-            model: 'Back-UPS Pro 1500', 
-            price: 199.99,
-            description: 'UPS de alto rendimiento para equipos de oficina y gaming.',
-            features: ['1500VA / 900W', 'Regulación automática de voltaje (AVR)', '10 tomas de corriente', 'Puerto USB']
+        {
+            id: 1,
+            img: "P112P110005.jpg",
+            nombre: "UPS MONOF OFFLINE 230V 650VA 4H ENCHUFE IEC BACK-UPS AVR BX650LI",
+            marca: "SCHNEIDER ELECTRIC",
+            categoria: "UPS Offline",
+            precio: 329.04,
+            potencia: "650VA",
+            tension_salida: "230V",
+            tension_entrada: "230VAC",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Offline"
         },
-        { 
-            id: 2, 
-            type: 'Fuente de poder', 
-            brand: 'Corsair', 
-            model: 'RM750x', 
-            price: 129.99,
-            description: 'Fuente de poder modular de alta eficiencia para PC de gama alta.',
-            features: ['750W', '80 PLUS Gold', 'Totalmente modular', 'Ventilador de 135mm']
+        {
+            id: 2,
+            img: "P1116QD0002.jpg",
+            nombre: "UPS MONOF ONLINE SRV 230V CAB USB 3000VA 4H APC EASY SRV3KI",
+            marca: "SCHNEIDER ELECTRIC",
+            categoria: "UPS Online",
+            precio: 3716.86,
+            potencia: "3000VA",
+            tension_salida: "220-240V",
+            tension_entrada: "230VAC",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Online"
         },
-        { 
-            id: 3, 
-            type: 'UPS', 
-            brand: 'CyberPower', 
-            model: 'CP1500PFCLCD', 
-            price: 219.99,
-            description: 'UPS de onda sinusoidal pura con pantalla LCD.',
-            features: ['1500VA / 1000W', 'Factor de potencia de 0.9', 'Pantalla LCD multifunción', '12 tomas de corriente']
+        {
+            id:3,
+            img: "145324.jpg",
+            nombre: "UPS 800VA(360W) CENTRALION BLAZER VISTA",
+            marca: "Centralion",
+            categoria: "UPS Line-Interactive",
+            precio: 400.00,
+            potencia: "800VA",
+            tension_salida: "220V",
+            tension_entrada: "220V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Line-Interactive"
         },
-        { 
-            id: 4, 
-            type: 'Fuente de poder', 
-            brand: 'EVGA', 
-            model: 'SuperNOVA 650 G5', 
-            price: 109.99,
-            description: 'Fuente de poder compacta y eficiente para sistemas de gama media.',
-            features: ['650W', '80 PLUS Gold', 'Totalmente modular', 'Modo ECO']
+        {
+            id:4,
+            img: "14532480.jpg",
+            nombre: "Ups Interactivo Elise Fase Aur-1000-lcd-usb 1000va / 600w",
+            marca: "Elise",
+            categoria: "UPS Line-Interactive",
+            precio: 605.00,
+            potencia: "1000VA",
+            tension_salida: "220 / 230 / 240V AC",
+            tension_entrada: "220 / 230 / 240V AC",
+            frecuencia: "45-55 Hz / 55 - 65 Hz",
+            numero_fases: "Monofásico",
+            tipo: "Line-Interactive"
         },
-        { 
-            id: 5, 
-            type: 'UPS', 
-            brand: 'Tripp Lite', 
-            model: 'SMART1500LCDT', 
-            price: 189.99,
-            description: 'UPS interactivo con pantalla LCD y puerto USB.',
-            features: ['1500VA / 900W', 'Regulación automática de voltaje (AVR)', 'Pantalla LCD', '10 tomas de corriente']
+        {
+            id: 5,
+            img: "1453249090.jpg",
+            nombre: "UPS Online APC Smart SRT3000XLI 3kVA 2.7kW 230V RJ45 Serial USB",
+            marca: "SCHNEIDER ELECTRIC",
+            categoria: "UPS Online",
+            precio: 6708.00,
+            potencia: "3000VA",
+            tension_salida: "230V",
+            tension_entrada: "230V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Online"
+        },
+        {
+            id: 6,
+            img: "145324909012.jpg",
+            nombre: "UPS OnLine Elise URT-3K 3000VA 2700W 230V USB RS232",
+            marca: "ELICE",
+            categoria: "UPS Online",
+            precio: 4934.00,
+            potencia: "3000VA",
+            tension_salida: "230V",
+            tension_entrada: "230V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Online"
+        },
+        {
+            id: 7,
+            img: "1453249090579.jpg",
+            nombre: "UPS Online Forza FDC-1002T 1000VA 800W AC 220V",
+            marca: "FORZA",
+            categoria: "UPS Online",
+            precio: 1467.00,
+            potencia: "1000VA",
+            tension_salida: "220V",
+            tension_entrada: "220V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Online"
+        },
+        {
+            id: 8,
+            img: "1453241090579.jpg",
+            nombre: "UPS Interactivo TrippLite SMX1500LCDT 1500VA 900W 8 Tomas",
+            marca: "TRIPP-LITE",
+            categoria: "UPS Line-Interactive",
+            precio: 862.00,
+            potencia: "1500VA",
+            tension_salida: "220V / 230V / 240V",
+            tension_entrada: "230V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Line-Interactive"
+        },
+        {
+            id: 9,
+            img: "P111CF20015.jpg",
+            nombre: "UPS MONOF OFFLINE 120V CAB USB 3KVA/2.7KW TIPO TORRE 9103-80187",
+            marca: "EATON",   
+            categoria: "UPS Offline",
+            precio: 8622.94,
+            potencia: "3000VA / 2700W",
+            tension_salida: "120V",
+            tension_entrada: "120V",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Offline"
+        },
+        {
+            id: 10,
+            img: "8435325426365.jpg",
+            nombre: "SAI OFF-LINE 1500VA/900W Entrada 220-240 Vac x4 Shcuko x2 RJ11 x1 USB tipo B x1 VGA",
+            marca: "OEM",
+            categoria: "UPS Offline",
+            precio: 614.97,
+            potencia: "1500VA / 900W",
+            tension_salida: "230V",
+            tension_entrada: "220-240VAC",
+            tipo: "Offline"
         }
     ];
 
