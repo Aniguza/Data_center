@@ -20,11 +20,11 @@
                 <div class="filter-section">
                     <h3>Rango de precio</h3>
                     <div class="price-slider">
-                        <input type="range" id="priceRangeMin" min="0" max="300" step="10" value="0">
-                        <input type="range" id="priceRangeMax" min="0" max="300" step="10" value="300">
+                        <input type="range" id="priceRangeMin" min="0" max="1000" step="10" value="0">
+                        <input type="range" id="priceRangeMax" min="0" max="1000" step="10" value="1000">
                         <div class="price-labels">
                             <span id="minPriceLabel">$0</span>
-                            <span id="maxPriceLabel">$300</span>
+                            <span id="maxPriceLabel">$1000</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
             </aside>
             <main>
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Buscar por marca o modelo" aria-label="Buscar por marca o modelo">
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre, marca o tipo" aria-label="Buscar por nombre, marca o tipo">
                 </div>
                 <div id="resultsContainer" class="results-container">
                     <!-- Las tarjetas de resultados se insertarán aquí -->
@@ -49,6 +49,7 @@
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
             <p id="modalPrice"></p>
+            <h3>Características:</h3>
             <ul id="modalFeatures"></ul>
         </div>
     </div>

@@ -16,22 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxPriceLabel = document.getElementById('maxPriceLabel');
     const typeCheckboxes = document.querySelectorAll('input[name="type"]');
 
-    // Datos de ejemplo (en una aplicación real, estos vendrían de una base de datos o API)
     const products = [
-        {
-            id: 1,
-            img: "P112P110005.jpg",
-            nombre: "UPS MONOF OFFLINE 230V 650VA 4H ENCHUFE IEC BACK-UPS AVR BX650LI",
-            marca: "SCHNEIDER ELECTRIC",
-            categoria: "Offline",
-            precio: 329.04,
-            potencia: "650VA",
-            tension_salida: "230V",
-            tension_entrada: "230VAC",
-            frecuencia: "50/60Hz",
-            numero_fases: "Monofásico",
-            tipo: "UPS"
-        },
         {
             id: 2,
             img: "P1116QD0002.jpg",
@@ -156,16 +141,18 @@ document.addEventListener('DOMContentLoaded', function() {
             tension_entrada: "220-240VAC",
             tipo: "UPS"
         }
+        // Añade más productos aquí con la misma estructura
     ];
 
     function createProductCard(product) {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.brand} ${product.model}">
-            <h2>${product.brand} ${product.model}</h2>
-            <p>${product.type}</p>
-            <p>$${product.price.toFixed(2)}</p>
+            <img src="${product.img}" alt="${product.nombre}">
+            <h2>${product.nombre}</h2>
+            <p>${product.marca}</p>
+            <p>${product.tipo} - ${product.categoria}</p>
+            <p>$${product.precio.toFixed(2)}</p>
         `;
         card.addEventListener('click', () => showModal(product));
         return card;
@@ -192,29 +179,30 @@ document.addEventListener('DOMContentLoaded', function() {
             .map(checkbox => checkbox.value);
 
         const filteredProducts = products.filter(product => 
-            (product.brand.toLowerCase().includes(searchTerm) ||
-            product.model.toLowerCase().includes(searchTerm) ||
-            product.type.toLowerCase().includes(searchTerm)) &&
-            product.price >= minPrice &&
-            product.price <= maxPrice &&
-            (selectedTypes.length === 0 || selectedTypes.includes(product.type))
+            (product.nombre.toLowerCase().includes(searchTerm) ||
+            product.marca.toLowerCase().includes(searchTerm) ||
+            product.tipo.toLowerCase().includes(searchTerm)) &&
+            product.precio >= minPrice &&
+            product.precio <= maxPrice &&
+            (selectedTypes.length === 0 || selectedTypes.includes(product.tipo))
         );
 
         displayProducts(filteredProducts);
     }
 
     function showModal(product) {
-        modalImage.src = product.image;
-        modalImage.alt = `${product.brand} ${product.model}`;
-        modalTitle.textContent = `${product.brand} ${product.model}`;
-        modalDescription.textContent = product.description;
-        modalPrice.textContent = `Precio: $${product.price.toFixed(2)}`;
-        modalFeatures.innerHTML = '';
-        product.features.forEach(feature => {
-            const li = document.createElement('li');
-            li.textContent = feature;
-            modalFeatures.appendChild(li);
-        });
+        modalImage.src = product.img;
+        modalImage.alt = product.nombre;
+        modalTitle.textContent = product.nombre;
+        modalDescription.textContent = `${product.marca} - ${product.categoria}`;
+        modalPrice.textContent = `Precio: $${product.precio.toFixed(2)}`;
+        modalFeatures.innerHTML = `
+            <li>Potencia: ${product.potencia}</li>
+            <li>Tensión de salida: ${product.tension_salida}</li>
+            <li>Tensión de entrada: ${product.tension_entrada}</li>
+            <li>Frecuencia: ${product.frecuencia}</li>
+            <li>Número de fases: ${product.numero_fases}</li>
+        `;
         modal.classList.remove('hidden');
         setTimeout(() => {
             modal.classList.add('show');
