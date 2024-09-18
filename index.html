@@ -9,13 +9,37 @@
 <body>
     <div class="container">
         <h1>Buscador de UPS y Fuentes de Poder</h1>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Buscar por marca o modelo" aria-label="Buscar por marca o modelo">
+        <div class="content">
+            <aside class="filters">
+                <h2>Filtros</h2>
+                <div class="filter-section">
+                    <h3>Tipo de producto</h3>
+                    <label><input type="checkbox" name="type" value="UPS"> UPS</label>
+                    <label><input type="checkbox" name="type" value="Fuente de poder"> Fuente de poder</label>
+                </div>
+                <div class="filter-section">
+                    <h3>Rango de precio</h3>
+                    <div class="price-slider">
+                        <input type="range" id="priceRangeMin" min="0" max="300" step="10" value="0">
+                        <input type="range" id="priceRangeMax" min="0" max="300" step="10" value="300">
+                        <div class="price-labels">
+                            <span id="minPriceLabel">$0</span>
+                            <span id="maxPriceLabel">$300</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="applyFilters">Aplicar filtros</button>
+            </aside>
+            <main>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar por marca o modelo" aria-label="Buscar por marca o modelo">
+                </div>
+                <div id="resultsContainer" class="results-container">
+                    <!-- Las tarjetas de resultados se insertarán aquí -->
+                </div>
+                <p id="noResults" class="hidden">No se encontraron resultados. Intenta con otra búsqueda.</p>
+            </main>
         </div>
-        <div id="resultsContainer" class="results-container">
-            <!-- Las tarjetas de resultados se insertarán aquí -->
-        </div>
-        <p id="noResults" class="hidden">No se encontraron resultados. Intenta con otra búsqueda.</p>
     </div>
 
     <div id="modal" class="modal hidden">

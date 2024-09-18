@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalPrice = document.getElementById('modalPrice');
     const modalFeatures = document.getElementById('modalFeatures');
     const closeModal = document.getElementsByClassName('close')[0];
+    const applyFiltersButton = document.getElementById('applyFilters');
+    const priceRangeMin = document.getElementById('priceRangeMin');
+    const priceRangeMax = document.getElementById('priceRangeMax');
+    const minPriceLabel = document.getElementById('minPriceLabel');
+    const maxPriceLabel = document.getElementById('maxPriceLabel');
+    const typeCheckboxes = document.querySelectorAll('input[name="type"]');
 
     // Datos de ejemplo (en una aplicación real, estos vendrían de una base de datos o API)
     const products = [
@@ -70,30 +76,36 @@ document.addEventListener('DOMContentLoaded', function() {
         return card;
     }
 
-    function displayAllProducts() {
+    function displayProducts(productsToDisplay) {
         resultsContainer.innerHTML = '';
-        products.forEach(product => {
-            resultsContainer.appendChild(createProductCard(product));
-        });
+        if (productsToDisplay.length === 0) {
+            noResults.classList.remove('hidden');
+        } else {
+            noResults.classList.add('hidden');
+            productsToDisplay.forEach(product => {
+                resultsContainer.appendChild(createProductCard(product));
+            });
+        }
     }
 
     function filterProducts() {
         const searchTerm = searchInput.value.toLowerCase();
+        const minPrice = parseFloat(priceRangeMin.value);
+        const maxPrice = parseFloat(priceRangeMax.value);
+        const selectedTypes = Array.from(typeCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
         const filteredProducts = products.filter(product => 
-            product.brand.toLowerCase().includes(searchTerm) ||
+            (product.brand.toLowerCase().includes(searchTerm) ||
             product.model.toLowerCase().includes(searchTerm) ||
-            product.type.toLowerCase().includes(searchTerm)
+            product.type.toLowerCase().includes(searchTerm)) &&
+            product.price >= minPrice &&
+            product.price <= maxPrice &&
+            (selectedTypes.length === 0 || selectedTypes.includes(product.type))
         );
 
-        resultsContainer.innerHTML = '';
-        if (filteredProducts.length === 0) {
-            noResults.classList.remove('hidden');
-        } else {
-            noResults.classList.add('hidden');
-            filteredProducts.forEach(product => {
-                resultsContainer.appendChild(createProductCard(product));
-            });
-        }
+        displayProducts(filteredProducts);
     }
 
     function showModal(product) {
@@ -107,18 +119,46 @@ document.addEventListener('DOMContentLoaded', function() {
             modalFeatures.appendChild(li);
         });
         modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+    }
+
+    function hideModal() {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    function updatePriceLabels() {
+        minPriceLabel.textContent = `$${priceRangeMin.value}`;
+        maxPriceLabel.textContent = `$${priceRangeMax.value}`;
+    }
+
+    function setMinMax() {
+        if (parseInt(priceRangeMin.value) > parseInt(priceRangeMax.value)) {
+            priceRangeMin.value = priceRangeMax.value;
+        }
+        updatePriceLabels();
     }
 
     // Mostrar todos los productos al cargar la página
-    displayAllProducts();
+    displayProducts(products);
 
-    // Filtrar productos mientras el usuario escribe
+    // Eventos para filtrar productos
     searchInput.addEventListener('input', filterProducts);
+    applyFiltersButton.addEventListener('click', filterProducts);
+    priceRangeMin.addEventListener('input', setMinMax);
+    priceRangeMax.addEventListener('input', setMinMax);
 
-    closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+    closeModal.addEventListener('click', hideModal);
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
-            modal.classList.add('hidden');
+            hideModal();
         }
     });
+
+    // Inicializar las etiquetas de precio
+    updatePriceLabels();
 });

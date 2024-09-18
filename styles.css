@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding: 20px;
@@ -18,8 +18,95 @@ h1 {
     text-align: center;
 }
 
-.search-container {
+.content {
     display: flex;
+    gap: 20px;
+}
+
+.filters {
+    flex: 0 0 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    margin-bottom: 10px;
+}
+
+.filter-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.price-slider {
+    width: 100%;
+    position: relative;
+    height: 30px;
+}
+
+.price-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    pointer-events: none;
+}
+
+.price-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #5c6bc0;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.price-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #5c6bc0;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.price-slider input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.price-slider input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+main {
+    flex: 1;
+}
+
+.search-container {
     margin-bottom: 20px;
 }
 
@@ -31,6 +118,9 @@ input[type="text"] {
     border-radius: 4px;
 }
 
+#modalFeatures{
+    margin-left: 15px;
+}
 .results-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -72,6 +162,14 @@ input[type="text"] {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-content {
@@ -82,6 +180,14 @@ input[type="text"] {
     width: 80%;
     max-width: 600px;
     border-radius: 8px;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .close {
@@ -99,8 +205,28 @@ input[type="text"] {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
+button {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3f51b5;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
