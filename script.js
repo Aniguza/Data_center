@@ -18,8 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const products = [
         {
+            id: 1,
+            img: "img/P112P110005.jpg",
+            nombre: "UPS MONOF OFFLINE 230V 650VA 4H ENCHUFE IEC BACK-UPS AVR BX650LI",
+            marca: "SCHNEIDER ELECTRIC",
+            categoria: "Offline",
+            precio: 329.04,
+            potencia: "650VA",
+            tension_salida: "230V",
+            tension_entrada: "230VAC",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "UPS"
+        },
+        {
             id: 2,
-            img: "P1116QD0002.jpg",
+            img: "img/P1116QD0002.jpg",
             nombre: "UPS MONOF ONLINE SRV 230V CAB USB 3000VA 4H APC EASY SRV3KI",
             marca: "SCHNEIDER ELECTRIC",
             categoria: "Online",
@@ -33,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id:3,
-            img: "145324.jpg",
+            img: "img/145324.jpg",
             nombre: "UPS 800VA(360W) CENTRALION BLAZER VISTA",
             marca: "Centralion",
             categoria: "Line-Interactive",
@@ -47,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id:4,
-            img: "14532480.jpg",
+            img: "img/14532480.jpg",
             nombre: "Ups Interactivo Elise Fase Aur-1000-lcd-usb 1000va / 600w",
             marca: "Elise",
             categoria: "Line-Interactive",
@@ -61,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 5,
-            img: "1453249090.jpg",
+            img: "img/1453249090.jpg",
             nombre: "UPS Online APC Smart SRT3000XLI 3kVA 2.7kW 230V RJ45 Serial USB",
             marca: "SCHNEIDER ELECTRIC",
             categoria: "Online",
@@ -75,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 6,
-            img: "145324909012.jpg",
+            img: "img/145324909012.jpg",
             nombre: "UPS OnLine Elise URT-3K 3000VA 2700W 230V USB RS232",
             marca: "ELICE",
             categoria: "Online",
@@ -89,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 7,
-            img: "1453249090579.jpg",
+            img: "img/1453249090579.jpg",
             nombre: "UPS Online Forza FDC-1002T 1000VA 800W AC 220V",
             marca: "FORZA",
             categoria: "Online",
@@ -103,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 8,
-            img: "1453241090579.jpg",
+            img: "img/1453241090579.jpg",
             nombre: "UPS Interactivo TrippLite SMX1500LCDT 1500VA 900W 8 Tomas",
             marca: "TRIPP-LITE",
             categoria: "Line-Interactive",
@@ -117,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 9,
-            img: "P111CF20015.jpg",
+            img: "img/P111CF20015.jpg",
             nombre: "UPS MONOF OFFLINE 120V CAB USB 3KVA/2.7KW TIPO TORRE 9103-80187",
             marca: "EATON",   
             categoria: "Offline",
@@ -131,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 10,
-            img: "8435325426365.jpg",
+            img: "img/8435325426365.jpg",
             nombre: "SAI OFF-LINE 1500VA/900W Entrada 220-240 Vac x4 Shcuko x2 RJ11 x1 USB tipo B x1 VGA",
             marca: "OEM",
             categoria: "Offline",
@@ -141,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
             tension_entrada: "220-240VAC",
             tipo: "UPS"
         }
-        // Añade más productos aquí con la misma estructura
     ];
 
     function createProductCard(product) {
