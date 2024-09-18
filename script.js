@@ -22,138 +22,138 @@ document.addEventListener('DOMContentLoaded', function() {
             img: "P112P110005.jpg",
             nombre: "UPS MONOF OFFLINE 230V 650VA 4H ENCHUFE IEC BACK-UPS AVR BX650LI",
             marca: "SCHNEIDER ELECTRIC",
-            categoria: "UPS Offline",
+            categoria: "Offline",
             precio: 329.04,
             potencia: "650VA",
             tension_salida: "230V",
             tension_entrada: "230VAC",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Offline"
+            tipo: "UPS"
         },
         {
             id: 2,
             img: "P1116QD0002.jpg",
             nombre: "UPS MONOF ONLINE SRV 230V CAB USB 3000VA 4H APC EASY SRV3KI",
             marca: "SCHNEIDER ELECTRIC",
-            categoria: "UPS Online",
+            categoria: "Online",
             precio: 3716.86,
             potencia: "3000VA",
             tension_salida: "220-240V",
             tension_entrada: "230VAC",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Online"
+            tipo: "UPS"
         },
         {
             id:3,
             img: "145324.jpg",
             nombre: "UPS 800VA(360W) CENTRALION BLAZER VISTA",
             marca: "Centralion",
-            categoria: "UPS Line-Interactive",
+            categoria: "Line-Interactive",
             precio: 400.00,
             potencia: "800VA",
             tension_salida: "220V",
             tension_entrada: "220V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Line-Interactive"
+            tipo: "UPS"
         },
         {
             id:4,
             img: "14532480.jpg",
             nombre: "Ups Interactivo Elise Fase Aur-1000-lcd-usb 1000va / 600w",
             marca: "Elise",
-            categoria: "UPS Line-Interactive",
+            categoria: "Line-Interactive",
             precio: 605.00,
             potencia: "1000VA",
             tension_salida: "220 / 230 / 240V AC",
             tension_entrada: "220 / 230 / 240V AC",
             frecuencia: "45-55 Hz / 55 - 65 Hz",
             numero_fases: "Monofásico",
-            tipo: "Line-Interactive"
+            tipo: "UPS"
         },
         {
             id: 5,
             img: "1453249090.jpg",
             nombre: "UPS Online APC Smart SRT3000XLI 3kVA 2.7kW 230V RJ45 Serial USB",
             marca: "SCHNEIDER ELECTRIC",
-            categoria: "UPS Online",
+            categoria: "Online",
             precio: 6708.00,
             potencia: "3000VA",
             tension_salida: "230V",
             tension_entrada: "230V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Online"
+            tipo: "UPS"
         },
         {
             id: 6,
             img: "145324909012.jpg",
             nombre: "UPS OnLine Elise URT-3K 3000VA 2700W 230V USB RS232",
             marca: "ELICE",
-            categoria: "UPS Online",
+            categoria: "Online",
             precio: 4934.00,
             potencia: "3000VA",
             tension_salida: "230V",
             tension_entrada: "230V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Online"
+            tipo: "UPS"
         },
         {
             id: 7,
             img: "1453249090579.jpg",
             nombre: "UPS Online Forza FDC-1002T 1000VA 800W AC 220V",
             marca: "FORZA",
-            categoria: "UPS Online",
+            categoria: "Online",
             precio: 1467.00,
             potencia: "1000VA",
             tension_salida: "220V",
             tension_entrada: "220V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Online"
+            tipo: "UPS"
         },
         {
             id: 8,
             img: "1453241090579.jpg",
             nombre: "UPS Interactivo TrippLite SMX1500LCDT 1500VA 900W 8 Tomas",
             marca: "TRIPP-LITE",
-            categoria: "UPS Line-Interactive",
+            categoria: "Line-Interactive",
             precio: 862.00,
             potencia: "1500VA",
             tension_salida: "220V / 230V / 240V",
             tension_entrada: "230V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Line-Interactive"
+            tipo: "UPS"
         },
         {
             id: 9,
             img: "P111CF20015.jpg",
             nombre: "UPS MONOF OFFLINE 120V CAB USB 3KVA/2.7KW TIPO TORRE 9103-80187",
             marca: "EATON",   
-            categoria: "UPS Offline",
+            categoria: "Offline",
             precio: 8622.94,
             potencia: "3000VA / 2700W",
             tension_salida: "120V",
             tension_entrada: "120V",
             frecuencia: "50/60Hz",
             numero_fases: "Monofásico",
-            tipo: "Offline"
+            tipo: "UPS"
         },
         {
             id: 10,
             img: "8435325426365.jpg",
             nombre: "SAI OFF-LINE 1500VA/900W Entrada 220-240 Vac x4 Shcuko x2 RJ11 x1 USB tipo B x1 VGA",
             marca: "OEM",
-            categoria: "UPS Offline",
+            categoria: "Offline",
             precio: 614.97,
             potencia: "1500VA / 900W",
             tension_salida: "230V",
             tension_entrada: "220-240VAC",
-            tipo: "Offline"
+            tipo: "UPS"
         }
     ];
 
