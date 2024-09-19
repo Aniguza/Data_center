@@ -1,22 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("searchInput");
-  const resultsContainer = document.getElementById("resultsContainer");
-  const noResults = document.getElementById("noResults");
-  const modal = document.getElementById("modal");
-  const modalImage = document.getElementById("modalImage");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDescription = document.getElementById("modalDescription");
-  const modalPrice = document.getElementById("modalPrice");
-  const modalFeatures = document.getElementById("modalFeatures");
-  const closeModal = document.getElementsByClassName("close")[0];
-  const applyFiltersButton = document.getElementById("applyFilters");
-  const priceRangeMin = document.getElementById("priceRangeMin");
-  const priceRangeMax = document.getElementById("priceRangeMax");
-  const minPriceLabel = document.getElementById("minPriceLabel");
-  const maxPriceLabel = document.getElementById("maxPriceLabel");
-  const typeCheckboxes = document.querySelectorAll('input[name="type"]');
-  const brandSelect = document.getElementById("brandSelect");
-  const typeSelect = document.getElementById("typeSelect");
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const resultsContainer = document.getElementById('resultsContainer');
+  const noResults = document.getElementById('noResults');
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalPrice = document.getElementById('modalPrice');
+  const modalFeatures = document.getElementById('modalFeatures');
+  const closeModal = document.getElementsByClassName('close')[0];
+  const applyFiltersButton = document.getElementById('applyFilters');
+  const priceRangeMin = document.getElementById('priceRangeMin');
+  const priceRangeMax = document.getElementById('priceRangeMax');
+  const minPriceLabel = document.getElementById('minPriceLabel');
+  const maxPriceLabel = document.getElementById('maxPriceLabel');
+  const productTypeRadios = document.querySelectorAll('input[name="productType"]');
+  const brandSelect = document.getElementById('brandSelect');
+  const categorySelect = document.getElementById('categorySelect');
 
   const products = [
     {
@@ -161,113 +161,143 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  function createProductCard(product) {
-    const card = document.createElement("div");
-    card.className = "card";
+  function updateSelectOptions(productType) {
+    const filteredProducts = productType === 'Todos' ? products : products.filter(p => p.tipo === productType);
+    
+    const brands = [...new Set(filteredProducts.map(product => product.marca))];
+    const categories = [...new Set(filteredProducts.map(product => product.categoria))];
+
+    brandSelect.innerHTML = '<option value="">Seleccionar marca</option>';
+    categorySelect.innerHTML = '<option value="">Seleccionar categoría</option>';
+
+    brands.forEach(brand => {
+        const option = document.createElement('option');
+        option.value = brand;
+        option.textContent = brand;
+        brandSelect.appendChild(option);
+    });
+
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    });
+}
+
+function createProductCard(product) {
+    const card = document.createElement('div');
+    card.className = 'card';
     card.innerHTML = `
-            <img src="${product.img}" alt="${product.nombre}">
-            <h2>${product.nombre}</h2>
-            <p>${product.marca}</p>
-            <p>${product.tipo} - ${product.categoria}</p>
-            <p>$${product.precio.toFixed(2)}</p>
-        `;
-    card.addEventListener("click", () => showModal(product));
+        <img src="${product.img}" alt="${product.nombre}">
+        <h2>${product.nombre}</h2>
+        <p>${product.marca}</p>
+        <p>${product.tipo} - ${product.categoria}</p>
+        <p>$${product.precio.toFixed(2)}</p>
+    `;
+    card.addEventListener('click', () => showModal(product));
     return card;
-  }
+}
 
-  function displayProducts(productsToDisplay) {
-    resultsContainer.innerHTML = "";
+function displayProducts(productsToDisplay) {
+    resultsContainer.innerHTML = '';
     if (productsToDisplay.length === 0) {
-      noResults.classList.remove("hidden");
+        noResults.classList.remove('hidden');
     } else {
-      noResults.classList.add("hidden");
-      productsToDisplay.forEach((product) => {
-        resultsContainer.appendChild(createProductCard(product));
-      });
+        noResults.classList.add('hidden');
+        productsToDisplay.forEach(product => {
+            resultsContainer.appendChild(createProductCard(product));
+        });
     }
-  }
+}
 
-  function filterProducts() {
+function filterProducts() {
     const searchTerm = searchInput.value.toLowerCase();
     const minPrice = parseFloat(priceRangeMin.value);
     const maxPrice = parseFloat(priceRangeMax.value);
+    const selectedProductType = document.querySelector('input[name="productType"]:checked').value;
     const selectedBrand = brandSelect.value;
-    const selectedType = typeSelect.value;
+    const selectedCategory = categorySelect.value;
 
-    const filteredProducts = products.filter((product) => {
-      const matchesSearch =
-        product.nombre.toLowerCase().includes(searchTerm) ||
-        product.marca.toLowerCase().includes(searchTerm);
-      const matchesPrice =
-        product.precio >= minPrice && product.precio <= maxPrice;
-      const matchesBrand =
-        selectedBrand === "" || product.marca === selectedBrand;
-      const matchesType = selectedType === "" || product.tipo === selectedType;
+    const filteredProducts = products.filter(product => {
+        const matchesSearch = product.nombre.toLowerCase().includes(searchTerm) ||
+                              product.marca.toLowerCase().includes(searchTerm) ||
+                              product.tipo.toLowerCase().includes(searchTerm);
+        const matchesPrice = product.precio >= minPrice && product.precio <= maxPrice;
+        const matchesType = selectedProductType === 'Todos' || product.tipo === selectedProductType;
+        const matchesBrand = selectedBrand === "" || product.marca === selectedBrand;
+        const matchesCategory = selectedCategory === "" || product.categoria === selectedCategory;
 
-      return matchesSearch && matchesPrice && matchesBrand && matchesType;
+        return matchesSearch && matchesPrice && matchesType && matchesBrand && matchesCategory;
     });
 
     displayProducts(filteredProducts);
-  }
+}
 
-  function showModal(product) {
+function showModal(product) {
     modalImage.src = product.img;
     modalImage.alt = product.nombre;
     modalTitle.textContent = product.nombre;
     modalDescription.textContent = `${product.marca} - ${product.categoria}`;
     modalPrice.textContent = `Precio: $${product.precio.toFixed(2)}`;
     modalFeatures.innerHTML = `
-            <li>Potencia: ${product.potencia}</li>
-            <li>Tensión de salida: ${product.tension_salida}</li>
-            <li>Tensión de entrada: ${product.tension_entrada}</li>
-            <li>Frecuencia: ${product.frecuencia}</li>
-            <li>Número de fases: ${product.numero_fases}</li>
-        `;
-    modal.classList.remove("hidden");
+        <li>Potencia: ${product.potencia}</li>
+        <li>Tensión de salida: ${product.tension_salida}</li>
+        <li>Tensión de entrada: ${product.tension_entrada}</li>
+        <li>Frecuencia: ${product.frecuencia}</li>
+        <li>Número de fases: ${product.numero_fases}</li>
+    `;
+    modal.classList.remove('hidden');
     setTimeout(() => {
-      modal.classList.add("show");
+        modal.classList.add('show');
     }, 10);
-  }
+}
 
-  function hideModal() {
-    modal.classList.remove("show");
+function hideModal() {
+    modal.classList.remove('show');
     setTimeout(() => {
-      modal.classList.add("hidden");
+        modal.classList.add('hidden');
     }, 300);
-  }
+}
 
-  function updatePriceLabels() {
+function updatePriceLabels() {
     minPriceLabel.textContent = `$${priceRangeMin.value}`;
     maxPriceLabel.textContent = `$${priceRangeMax.value}`;
-  }
+}
 
-  function setMinMax() {
+function setMinMax() {
     if (parseInt(priceRangeMin.value) > parseInt(priceRangeMax.value)) {
-      priceRangeMin.value = priceRangeMax.value;
+        priceRangeMin.value = priceRangeMax.value;
     }
     updatePriceLabels();
     filterProducts();
-  }
+}
 
-  // Mostrar todos los productos al cargar la página
-  displayProducts(products);
+// Inicializar las opciones de los selects
+updateSelectOptions('Todos');
 
-  // Eventos para filtrar productos
-  searchInput.addEventListener("input", filterProducts);
-  applyFiltersButton.addEventListener("click", filterProducts);
-  priceRangeMin.addEventListener("input", setMinMax);
-  priceRangeMax.addEventListener("input", setMinMax);
-  typeCheckboxes.forEach((checkbox) =>
-    checkbox.addEventListener("change", filterProducts)
-  );
+// Mostrar todos los productos al cargar la página
+displayProducts(products);
 
-  closeModal.addEventListener("click", hideModal);
-  window.addEventListener("click", (event) => {
+// Eventos para filtrar productos
+searchInput.addEventListener('input', filterProducts);
+applyFiltersButton.addEventListener('click', filterProducts);
+priceRangeMin.addEventListener('input', setMinMax);
+priceRangeMax.addEventListener('input', setMinMax);
+productTypeRadios.forEach(radio => radio.addEventListener('change', function() {
+    updateSelectOptions(this.value);
+    filterProducts();
+}));
+brandSelect.addEventListener('change', filterProducts);
+categorySelect.addEventListener('change', filterProducts);
+
+closeModal.addEventListener('click', hideModal);
+window.addEventListener('click', (event) => {
     if (event.target === modal) {
-      hideModal();
+        hideModal();
     }
-  });
+});
 
-  // Inicializar las etiquetas de precio
-  updatePriceLabels();
+// Inicializar las etiquetas de precio
+updatePriceLabels();
 });

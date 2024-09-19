@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de UPS y Fuentes de Poder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Buscador de UPS y Fuentes de Poder</h1>
@@ -16,24 +18,22 @@
                 <h2>Filtros</h2>
                 <div class="filter-section">
                     <h3>Tipo de producto</h3>
-                    <label><input type="checkbox" name="type" value="UPS"> UPS</label>
-                    <label><input type="checkbox" name="type" value="Fuente de poder"> Fuente de poder</label>
+                    <label><input type="radio" name="productType" value="Todos" checked> Todos</label>
+                    <label><input type="radio" name="productType" value="UPS"> UPS</label>
+                    <label><input type="radio" name="productType" value="Fuente de poder"> Fuente de poder</label>
                 </div>
                 <div class="filter-section" id="brandFilter">
                     <h3>Marca</h3>
                     <select id="brandSelect">
                         <option value="">Seleccionar marca</option>
-                        <!-- Las opciones se llenarán dinámicamente -->
                     </select>
                 </div>
-                <div class="filter-section" id="typeFilter">
-                    <h3>Tipo</h3>
-                    <select id="typeSelect">
-                        <option value="">Seleccionar tipo</option>
-                        <!-- Las opciones se llenarán dinámicamente -->
+                <div class="filter-section" id="categoryFilter">
+                    <h3>Categoría</h3>
+                    <select id="categorySelect">
+                        <option value="">Seleccionar categoría</option>
                     </select>
                 </div>
-                
                 <div class="filter-section">
                     <h3>Rango de precio</h3>
                     <div class="price-slider">
@@ -49,7 +49,8 @@
             </aside>
             <main>
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Buscar por nombre, marca o tipo" aria-label="Buscar por nombre, marca o tipo">
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre, marca o tipo"
+                        aria-label="Buscar por nombre, marca o tipo">
                 </div>
                 <div id="resultsContainer" class="results-container">
                     <!-- Las tarjetas de resultados se insertarán aquí -->
@@ -61,16 +62,20 @@
 
     <div id="modal" class="modal hidden">
         <div class="modal-content">
-            <span class="close">&times;</span>
+
             <img id="modalImage" src="" alt="" class="modal-image">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-            <p id="modalPrice"></p>
-            <h3>Características:</h3>
-            <ul id="modalFeatures"></ul>
+            <div class="description">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p id="modalPrice"></p>
+                <h3>Características:</h3>
+                <ul id="modalFeatures"></ul>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

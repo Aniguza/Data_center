@@ -213,13 +213,16 @@ input[type="text"] {
 }
 
 .modal-content {
+    display: flex;
+    gap: 20px;
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    margin: 11% auto;
+    padding: 40px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
-    border-radius: 8px;
+    height: max-content;
+    max-width: 900px;
+    border-radius: 15px;
     transform: scale(0.7);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -237,7 +240,7 @@ input[type="text"] {
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
+.description{}
 .close {
     color: #aaa;
     float: right;
