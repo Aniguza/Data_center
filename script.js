@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
         potencia: 250,
         dimensiones: "15.00 x 8.15 x 4.05 cm",
         ventilador: "Interno",
-        certificacion: false,
       },
       {
         id: 12,
@@ -187,7 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
         potencia: 750,
         dimensiones: "140 x 150 x 86 mm",
         ventilador: "120 mm",
-        certificacion: false,
       },
       {
         "id": 13,
@@ -201,11 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "certificacion": "80 PLUS Gold",
         "potencia": 650,
         "dimensiones": "14.00 x 15.00 x 8.60 cm",
-        "ventilador": "12 cm (Hydraulic Bearing)",
-        "certificacion": true,
-        "proteccion": {
-          "other": "OTP, SCP, OPP, OCP, UVP, OVP"
-        }
+        "ventilador": "12 cm (Hydraulic Bearing)"
       },
       {
         "id": 14,
@@ -220,10 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 550,
         "dimensiones": "14.00 x 15.00 x 8.60 cm",
         "ventilador": "12 cm (Cojinete de manguito)",
-        "certificacion": true,
-        "proteccion": {
-          "other": "OTP, SCP, OPP, OCP, OVP"
-        }
       },
       {
         "id": 15,
@@ -238,10 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 600,
         "dimensiones": "14.00 x 15.00 x 8.60 cm",
         "ventilador": "12 cm",
-        "certificacion": true,
-        "proteccion": {
-          "other": "OTP, SCP, OPP, OCP, OVP"
-        }
       },
       {
         "id": 16,
@@ -256,10 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 1000,
         "dimensiones": "150 x 150 x 86 mm",
         "ventilador": "120 mm",
-        "certificacion": true,
-        "proteccion": {
-          "other": ""
-        }
       },
       {
         "id": 17,
@@ -274,10 +256,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 750,
         "dimensiones": "",
         "ventilador": "120 mm",
-        "certificacion": true,
-        "proteccion": {
-          "other": "SCP, OPP, OTP, OVP, OCP, UVP"
-        }
       },
       {
         "id": 18,
@@ -292,10 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 1200,
         "dimensiones": "",
         "ventilador": "Zero RPM Fan Mode",
-        "certificacion": true,
-        "proteccion": {
-          "other": ""
-        }
       },
       {
         "id": 19,
@@ -310,10 +284,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 1000,
         "dimensiones": "",
         "ventilador": "120 mm (Cojinete hidráulico HYB)",
-        "certificacion": true,
-        "proteccion": {
-          "other": "OVP, OPP, SCP, UVP, OCP, OTP"
-        }
       },
       {
         "id": 20,
@@ -328,10 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 1250,
         "dimensiones": "180 x 150 x 86 mm",
         "ventilador": "140 mm",
-        "certificacion": true,
-        "proteccion": {
-          "other": ""
-        }
       },
       {
         "id": 21,
@@ -346,10 +312,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "potencia": 600,
         "dimensiones": "",
         "ventilador": "",
-        "certificacion": false,
-        "proteccion": {
-          "other": ""
-        }
       }
   ];
 
