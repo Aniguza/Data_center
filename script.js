@@ -390,22 +390,34 @@ function filterProducts() {
 }
 
 function showModal(product) {
-    modalImage.src = product.img;
-    modalImage.alt = product.nombre;
-    modalTitle.textContent = product.nombre;
-    modalDescription.textContent = `${product.marca} - ${product.categoria}`;
-    modalPrice.textContent = `Precio: $${product.precio.toFixed(2)}`;
-    modalFeatures.innerHTML = `
-        <li>Potencia: ${product.potencia}</li>
-        <li>Tensión de salida: ${product.tension_salida}</li>
-        <li>Tensión de entrada: ${product.tension_entrada}</li>
-        <li>Frecuencia: ${product.frecuencia}</li>
-        <li>Número de fases: ${product.numero_fases}</li>
-    `;
-    modal.classList.remove('hidden');
-    setTimeout(() => {
-        modal.classList.add('show');
-    }, 10);
+  modalImage.src = product.img;
+  modalImage.alt = product.nombre;
+  modalTitle.textContent = product.nombre;
+  modalDescription.textContent = `${product.marca} - ${product.categoria}`;
+  modalPrice.textContent = `Precio: $${product.precio.toFixed(2)}`;
+  
+  if (product.tipo === "FUENTE DE PODER") {
+      modalFeatures.innerHTML = `
+          <li>Potencia: ${product.potencia}</li>
+          <li>Certificación: ${product.certificacion}</li>
+          <li>Modelo: ${product.modelo}</li>
+          <li>Dimensiones: ${product.dimensiones}</li>
+          <li>Medida de ventilador: ${product.ventilador}</li>
+      `;
+  } else {
+      modalFeatures.innerHTML = `
+          <li>Potencia: ${product.potencia}</li>
+          <li>Tensión de salida: ${product.tension_salida}</li>
+          <li>Tensión de entrada: ${product.tension_entrada}</li>
+          <li>Frecuencia: ${product.frecuencia}</li>
+          <li>Número de fases: ${product.numero_fases}</li>
+      `;
+  }
+
+  modal.classList.remove('hidden');
+  setTimeout(() => {
+      modal.classList.add('show');
+  }, 10);
 }
 
 function hideModal() {
