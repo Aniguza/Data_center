@@ -240,7 +240,9 @@ input[type="text"] {
     border-radius: 8px;
     margin-bottom: 15px;
 }
-.description{}
+#modalFeatures{
+    margin-left: 20px;
+}
 .close {
     color: #aaa;
     float: right;
