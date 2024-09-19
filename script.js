@@ -302,14 +302,14 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         "id": 21,
         "img": "img/13GE-DT5.jpg",
-        "nombre": "FUENTE DE PODER RIOPPA MICCRO AT-600W P4 MODEL:13GE-DT5",
-        "marca": "RIPPA",
+        "nombre": "FUENTE DE PODER AT",
+        "marca": "",
         "precio": 0,
         "tipo": "FUENTE DE PODER",
         "caracteristica": "AT",
-        "modelo": "13GE-DT5",
+        "modelo": "",
         "certificacion": "",
-        "potencia": 600,
+        "potencia": 0,
         "dimensiones": "",
         "ventilador": "",
       }
