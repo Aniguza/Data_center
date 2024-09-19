@@ -159,6 +159,198 @@ document.addEventListener('DOMContentLoaded', function() {
       tension_entrada: "220-240VAC",
       tipo: "UPS",
     },
+    {
+        id: 11,
+        img: "D3000702.JPG",
+        nombre: "FUENTE TE7061 250W FORMATO FLEX-ATX",
+        marca: "TEROS",
+        precio: 48,
+        tipo: "FUENTE DE PODER",
+        caracteristica: "FLEX-ATX",
+        modelo: "TE7061",
+        certificacion: "",
+        potencia: 250,
+        dimensiones: "15.00 x 8.15 x 4.05 cm",
+        ventilador: "Interno",
+        certificacion: false,
+      },
+      {
+        id: 12,
+        img: "017473.JPG",
+        nombre: "FUENTE 750W COOLER MASTER MWE BRONZE V2 (MPE-7501-ACABW-BUS) 80PLUS BRONZE",
+        marca: "COOLER MASTER",
+        precio: 368,
+        tipo: "FUENTE DE PODER",
+        caracteristica: "ATX",
+        modelo: "MWE BRONZE V2",
+        certificacion: "Bronze 80 PLUS",
+        potencia: 750,
+        dimensiones: "140 x 150 x 86 mm",
+        ventilador: "120 mm",
+        certificacion: false,
+      },
+      {
+        "id": 13,
+        "img": "CF000202.JPG",
+        "nombre": "Fuente de alimentación Gigabyte P650G (US), 650W, 80 PLUS Gold Certified, Formato ATX",
+        "marca": "GIGABYTE",
+        "precio": 294,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "",
+        "certificacion": "80 PLUS Gold",
+        "potencia": 650,
+        "dimensiones": "14.00 x 15.00 x 8.60 cm",
+        "ventilador": "12 cm (Hydraulic Bearing)",
+        "certificacion": true,
+        "proteccion": {
+          "other": "OTP, SCP, OPP, OCP, UVP, OVP"
+        }
+      },
+      {
+        "id": 14,
+        "img": "D2000602.JPG",
+        "nombre": "Fuente de alimentación MSI MAG A550BN, 550W, 80 PLUS Bronze Certified, Formato ATX",
+        "marca": "MSI",
+        "precio": 218.50,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "",
+        "certificacion": "80 PLUS Bronze",
+        "potencia": 550,
+        "dimensiones": "14.00 x 15.00 x 8.60 cm",
+        "ventilador": "12 cm (Cojinete de manguito)",
+        "certificacion": true,
+        "proteccion": {
+          "other": "OTP, SCP, OPP, OCP, OVP"
+        }
+      },
+      {
+        "id": 15,
+        "img": "CD000102.JPG",
+        "nombre": "Fuente de alimentación CERTIFICADA Teros TE7160, ATX, 600W, 80 Plus Bronce, 100V - 240VAC",
+        "marca": "TEROS",
+        "precio": 153,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "TE-7160WBRZ",
+        "certificacion": "80 PLUS Bronze",
+        "potencia": 600,
+        "dimensiones": "14.00 x 15.00 x 8.60 cm",
+        "ventilador": "12 cm",
+        "certificacion": true,
+        "proteccion": {
+          "other": "OTP, SCP, OPP, OCP, OVP"
+        }
+      },
+      {
+        "id": 16,
+        "img": "016974.JPG",
+        "nombre": "FUENTE 1000W ANTRYX KIRIN GOLD EVO II (CSZ1000V5) 80 PLUS GOLD MODULAR",
+        "marca": "ANTRYX",
+        "precio": 679,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "KIRIN GOLD EVO II",
+        "certificacion": "80 PLUS Gold",
+        "potencia": 1000,
+        "dimensiones": "150 x 150 x 86 mm",
+        "ventilador": "120 mm",
+        "certificacion": true,
+        "proteccion": {
+          "other": ""
+        }
+      },
+      {
+        "id": 17,
+        "img": "017480.jpg",
+        "nombre": "FUENTE 750W DEEPCOOL PK750D (R-PK750D-FA0B-US) 80 PLUS BRONZE",
+        "marca": "DEEPCOOL",
+        "precio": 269,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "PK750D",
+        "certificacion": "80 PLUS Bronze",
+        "potencia": 750,
+        "dimensiones": "",
+        "ventilador": "120 mm",
+        "certificacion": true,
+        "proteccion": {
+          "other": "SCP, OPP, OTP, OVP, OCP, UVP"
+        }
+      },
+      {
+        "id": 18,
+        "img": "016151.jpg",
+        "nombre": "FUENTE 1200W CORSAIR HX1200 (CP-9020140) 80 PLUS PLATINUM FULL MODULAR",
+        "marca": "CORSAIR",
+        "precio": 1146,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "HX1200",
+        "certificacion": "80 PLUS Platinum",
+        "potencia": 1200,
+        "dimensiones": "",
+        "ventilador": "Zero RPM Fan Mode",
+        "certificacion": true,
+        "proteccion": {
+          "other": ""
+        }
+      },
+      {
+        "id": 19,
+        "img": "014359.jpg",
+        "nombre": "FUENTE 1000W GIGABYTE UD1000GM (GP-UD1000GM) 80 PLUS GOLD",
+        "marca": "GIGABYTE",
+        "precio": 828,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "UD1000GM",
+        "certificacion": "80 PLUS Gold",
+        "potencia": 1000,
+        "dimensiones": "",
+        "ventilador": "120 mm (Cojinete hidráulico HYB)",
+        "certificacion": true,
+        "proteccion": {
+          "other": "OVP, OPP, SCP, UVP, OCP, OTP"
+        }
+      },
+      {
+        "id": 20,
+        "img": "014496.jpg",
+        "nombre": "FUENTE 1250W COOLER MASTER MWE V2 (MPE-C501-AFCAG-U2) 80 PLUS GOLD FULL MODULAR",
+        "marca": "COOLER MASTER",
+        "precio": 1234,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "ATX",
+        "modelo": "MWE V2",
+        "certificacion": "80 PLUS Gold",
+        "potencia": 1250,
+        "dimensiones": "180 x 150 x 86 mm",
+        "ventilador": "140 mm",
+        "certificacion": true,
+        "proteccion": {
+          "other": ""
+        }
+      },
+      {
+        "id": 21,
+        "img": "13GE-DT5.jpg",
+        "nombre": "FUENTE DE PODER RIOPPA MICCRO AT-600W P4 MODEL:13GE-DT5",
+        "marca": "RIPPA",
+        "precio": 0,
+        "tipo": "FUENTE DE PODER",
+        "caracteristica": "AT",
+        "modelo": "13GE-DT5",
+        "certificacion": "",
+        "potencia": 600,
+        "dimensiones": "",
+        "ventilador": "",
+        "certificacion": false,
+        "proteccion": {
+          "other": ""
+        }
+      }
   ];
 
   function updateSelectOptions(productType) {
