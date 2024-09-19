@@ -1,9 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #efeefd;
 }
 
 .container {
@@ -13,8 +20,15 @@ body {
     padding: 20px;
 }
 
+header{
+    background-color: #000;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+
 h1 {
-    color: #333;
+    color: #f8f8fc;
     text-align: center;
 }
 
@@ -66,7 +80,7 @@ h1 {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-color: #5c6bc0;
+    background-color: #2038c0;
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
@@ -75,7 +89,7 @@ h1 {
 .price-slider input[type="range"]::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background-color: #5c6bc0;
+    background-color: #2038c0;
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
@@ -104,6 +118,17 @@ h1 {
     span{
     margin-top: 20px;
     }
+}
+
+#searchInput{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: solid #CACDD8 1px;
+}
+
+#searchInput:focus{
+    color: #a1a3ac;
+    border: solid #CACDD8 1px;
 }
 
 main {
@@ -229,7 +254,7 @@ input[type="text"] {
 }
 
 button {
-    background-color: #5c6bc0;
+    background-color:  #2038c0;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -239,7 +264,7 @@ button {
 }
 
 button:hover {
-    background-color: #3f51b5;
+    background-color: #2038c0;
 }
 
 @media (max-width: 768px) {

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Buscador de UPS y Fuentes de Poder</h1>
+    </header>
+    <div class="container">
         <div class="content">
             <aside class="filters">
                 <h2>Filtros</h2>
@@ -17,6 +19,21 @@
                     <label><input type="checkbox" name="type" value="UPS"> UPS</label>
                     <label><input type="checkbox" name="type" value="Fuente de poder"> Fuente de poder</label>
                 </div>
+                <div class="filter-section" id="brandFilter">
+                    <h3>Marca</h3>
+                    <select id="brandSelect">
+                        <option value="">Seleccionar marca</option>
+                        <!-- Las opciones se llenarán dinámicamente -->
+                    </select>
+                </div>
+                <div class="filter-section" id="typeFilter">
+                    <h3>Tipo</h3>
+                    <select id="typeSelect">
+                        <option value="">Seleccionar tipo</option>
+                        <!-- Las opciones se llenarán dinámicamente -->
+                    </select>
+                </div>
+                
                 <div class="filter-section">
                     <h3>Rango de precio</h3>
                     <div class="price-slider">
