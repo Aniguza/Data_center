@@ -24,9 +24,10 @@ h1 {
 }
 
 .filters {
+    position: fixed;
     flex: 0 0 200px;
     background-color: white;
-    padding: 20px;
+    padding: 37px;
     border-radius: 8px;
     height: min-content;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -53,7 +54,8 @@ h1 {
 
 .price-slider input[type="range"] {
     position: absolute;
-    width: 100%;
+    width: 52%;
+    margin-left: 25%;
     -webkit-appearance: none;
     appearance: none;
     outline: none;
@@ -100,11 +102,13 @@ h1 {
     justify-content: space-between;
     margin-top: 10px;
     font-size: 14px;
+    width: 109%;
     color: #666;
 }
 
 main {
     flex: 1;
+    margin-left: 20%;
 }
 
 .search-container {
@@ -112,11 +116,18 @@ main {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+.bi-search{
+    color: #999;
+    position: absolute;
+    top: 20.3%;
+    left: 93%;
 }
 
 .results-container {

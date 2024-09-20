@@ -154,6 +154,62 @@ document.addEventListener('DOMContentLoaded', function() {
             tension_salida: "230V",
             tension_entrada: "220-240VAC",
             tipo: "UPS"
+        },
+        {
+            id: 11,
+            img: "img/FP800W.jpg",
+            nombre: "Fuente De Poder Para Servidor Hpe 80plus Platinum 800w",
+            marca: "HP",
+            categoria: "ATX",
+            precio: 550.71,
+            potencia: "800W",
+            tension_salida: "800W",
+            tension_entrada: "100-240VAC",
+            frecuencia: "Refrigeración por aire",
+            numero_fases: "Monofásico",
+            tipo: "Fuente de poder"
+        },
+        {
+            id: 12,
+            img: "img/FP1600W.jpg",
+            nombre: "ASUS ROG Thor 1600W Titanium",
+            marca: "ASUS",
+            categoria: "ATX",
+            precio: 672.99,
+            potencia: "1600W",
+            tension_salida: "1600W",
+            tension_entrada: "110V",
+            frecuencia: "Refrigeración por aire",
+            numero_fases: "Monofásico",
+            tipo: "Fuente de poder"
+        },
+        {
+            id: 13,
+            img: "img/FPRM1200X.jpg",
+            nombre: "Corsair Fuente de alimentación ATX totalmente modular RM1200x Shift ",
+            marca: "CORSAIR",
+            categoria: "ATX,EPS",
+            precio: 300.63,
+            potencia: "1200W",
+            tension_salida: "1200W",
+            tension_entrada: "240V",
+            frecuencia: "Refrigeración por aire",
+            numero_fases: "Monofásico",
+            tipo: "Fuente de poder"
+        },
+        {
+            id: 14,
+            img: "img/FP1200W.jpg",
+            nombre: "Fuente Poder Dell Poweredge T710 R810 R910 R510 1100w Server",
+            marca: "DELL",
+            categoria: "L1100A-S0",
+            precio: 664,
+            potencia: "1100W",
+            tension_salida: "1100W",
+            tension_entrada: "100-240V, 12A-6.7A",
+            frecuencia: "50/60Hz",
+            numero_fases: "Monofásico",
+            tipo: "Fuente de poder"
         }
     ];
 
