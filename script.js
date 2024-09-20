@@ -333,8 +333,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const brands = [...new Set(filteredProducts.map(product => product.marca))];
         const categories = [...new Set(filteredProducts.map(product => product.categoria))];
 
-        brandSelect.innerHTML = '<option value="">Seleccionar marca</option>';
-        categorySelect.innerHTML = '<option value="">Seleccionar categoría</option>';
+        brandSelect.innerHTML = '<option class="opcion" value="">Seleccionar marca</option>';
+        categorySelect.innerHTML = '<option class="opcion" value="">Seleccionar categoría</option>';
 
         brands.forEach(brand => {
             const option = document.createElement('option');
