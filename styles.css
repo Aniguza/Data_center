@@ -225,6 +225,9 @@ input[type="text"] {
     visibility: visible;
 }
 
+.img img{
+    border: 1px solid #888;
+}
 .modal-content {
     display: flex;
     gap: 20px;
