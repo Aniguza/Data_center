@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('searchInput');
   const resultsContainer = document.getElementById('resultsContainer');
   const noResults = document.getElementById('noResults');
@@ -160,213 +160,228 @@ document.addEventListener('DOMContentLoaded', function() {
       tipo: "UPS",
     },
     {
-        id: 11,
-        img: "img/D3000702.jpg",
-        nombre: "FUENTE TE7061 250W FORMATO FLEX-ATX",
-        marca: "TEROS",
-        precio: 48,
-        tipo: "FUENTE DE PODER",
-        categoria: "FLEX-ATX",
-        modelo: "TE7061",
-        certificacion: "",
-        potencia: 250,
-        dimensiones: "15.00 x 8.15 x 4.05 cm",
-        ventilador: "Interno",
-        
-      },
-      {
-        id: 12,
-        img: "img/017473.jpg",
-        nombre: "FUENTE 750W COOLER MASTER MWE BRONZE V2 (MPE-7501-ACABW-BUS) 80PLUS BRONZE",
-        marca: "COOLER MASTER",
-        precio: 368,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "MWE BRONZE V2",
-        certificacion: "Bronze 80 PLUS",
-        potencia: 750,
-        dimensiones: "140 x 150 x 86 mm",
-        ventilador: "120 mm",
-      },
-      {
-        id: 13,
-        img: "img/CF000202.jpg",
-        nombre: "Fuente de alimentación Gigabyte P650G (US), 650W, 80 PLUS Gold Certified, Formato ATX",
-        marca: "GIGABYTE",
-        precio: 294,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "",
-        certificacion: "80 PLUS Gold",
-        potencia: 650,
-        dimensiones: "14.00 x 15.00 x 8.60 cm",
-        ventilador: "12 cm (Hydraulic Bearing)"
-      },
-      {
-        id: 14,
-        img: "img/D2000602.jpg",
-        nombre: "Fuente de alimentación MSI MAG A550BN, 550W, 80 PLUS Bronze Certified, Formato ATX",
-        marca: "MSI",
-        precio: 218.50,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "",
-        certificacion: "80 PLUS Bronze",
-        potencia: 550,
-        dimensiones: "14.00 x 15.00 x 8.60 cm",
-        ventilador: "12 cm (Cojinete de manguito)",
-      },
-      {
-        id: 15,
-        img: "img/CD000102.jpg",
-        nombre: "Fuente de alimentación CERTIFICADA Teros TE7160, ATX, 600W, 80 Plus Bronce, 100V - 240VAC",
-        marca: "TEROS",
-        precio: 153,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "TE-7160WBRZ",
-        certificacion: "80 PLUS Bronze",
-        potencia: 600,
-        dimensiones: "14.00 x 15.00 x 8.60 cm",
-        ventilador: "12 cm",
-      },
-      {
-        id: 16,
-        img: "img/016974.jpg",
-        nombre: "FUENTE 1000W ANTRYX KIRIN GOLD EVO II (CSZ1000V5) 80 PLUS GOLD MODULAR",
-        marca: "ANTRYX",
-        precio: 679,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "KIRIN GOLD EVO II",
-        certificacion: "80 PLUS Gold",
-        potencia: 1000,
-        dimensiones: "150 x 150 x 86 mm",
-        ventilador: "120 mm",
-      },
-      {
-        id: 17,
-        img: "img/017480.jpg",
-        nombre: "FUENTE 750W DEEPCOOL PK750D (R-PK750D-FA0B-US) 80 PLUS BRONZE",
-        marca: "DEEPCOOL",
-        precio: 269,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "PK750D",
-        certificacion: "80 PLUS Bronze",
-        potencia: 750,
-        dimensiones: "",
-        ventilador: "120 mm",
-      },
-      {
-        id: 18,
-        img: "img/016151.jpg",
-        nombre: "FUENTE 1200W CORSAIR HX1200 (CP-9020140) 80 PLUS PLATINUM FULL MODULAR",
-        marca: "CORSAIR",
-        precio: 1146,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "HX1200",
-        certificacion: "80 PLUS Platinum",
-        potencia: 1200,
-        dimensiones: "",
-        ventilador: "Zero RPM Fan Mode",
-      },
-      {
-        id: 19,
-        img: "img/014359.jpg",
-        nombre: "FUENTE 1000W GIGABYTE UD1000GM (GP-UD1000GM) 80 PLUS GOLD",
-        marca: "GIGABYTE",
-        precio: 828,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "UD1000GM",
-        certificacion: "80 PLUS Gold",
-        potencia: 1000,
-        dimensiones: "",
-        ventilador: "120 mm (Cojinete hidráulico HYB)",
-      },
-      {
-        id: 20,
-        img: "img/014496.jpg",
-        nombre: "FUENTE 1250W COOLER MASTER MWE V2 (MPE-C501-AFCAG-U2) 80 PLUS GOLD FULL MODULAR",
-        marca: "COOLER MASTER",
-        precio: 1234,
-        tipo: "FUENTE DE PODER",
-        categoria: "ATX",
-        modelo: "MWE V2",
-        certificacion: "80 PLUS Gold",
-        potencia: 1250,
-        dimensiones: "180 x 150 x 86 mm",
-        ventilador: "140 mm",
-      },
-      {
-        id: 21,
-        img: "img/13GE-DT5.jpg",
-        nombre: "FUENTE DE PODER AT",
-        marca: "",
-        precio: 0,
-        tipo: "FUENTE DE PODER",
-        categoria: "AT",
-        modelo: "13GE-DT5",
-        certificacion: "",
-        potencia: 0,
-        dimensiones: "",
-        ventilador: "",
-      }
+      id: 11,
+      img: "img/D3000702.jpg",
+      nombre: "FUENTE TE7061 250W FORMATO FLEX-ATX",
+      marca: "TEROS",
+      precio: 48,
+      tipo: "FUENTE DE PODER",
+      categoria: "FLEX-ATX",
+      modelo: "TE7061",
+      certificacion: "",
+      potencia: 250,
+      dimensiones: "15.00 x 8.15 x 4.05 cm",
+      ventilador: "Interno",
+
+    },
+    {
+      id: 12,
+      img: "img/017473.jpg",
+      nombre: "FUENTE 750W COOLER MASTER MWE BRONZE V2 (MPE-7501-ACABW-BUS) 80PLUS BRONZE",
+      marca: "COOLER MASTER",
+      precio: 368,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "MWE BRONZE V2",
+      certificacion: "Bronze 80 PLUS",
+      potencia: 750,
+      dimensiones: "140 x 150 x 86 mm",
+      ventilador: "120 mm",
+    },
+    {
+      "id": 13,
+      "img": "img/CF000202.jpg",
+      "nombre": "Fuente de alimentación Gigabyte P650G (US), 650W, 80 PLUS Gold Certified, Formato ATX",
+      "marca": "GIGABYTE",
+      "precio": 294,
+      "tipo": "FUENTE DE PODER",
+      "categoria": "ATX",
+      "modelo": "",
+      "certificacion": "80 PLUS Gold",
+      "potencia": 650,
+      "dimensiones": "14.00 x 15.00 x 8.60 cm",
+      "ventilador": "12 cm (Hydraulic Bearing)"
+    },
+    {
+      id: 14,
+      img: "img/D2000602.jpg",
+      nombre: "Fuente de alimentación MSI MAG A550BN, 550W, 80 PLUS Bronze Certified, Formato ATX",
+      marca: "MSI",
+      precio: 218.50,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "",
+      certificacion: "80 PLUS Bronze",
+      potencia: 550,
+      dimensiones: "14.00 x 15.00 x 8.60 cm",
+      ventilador: "12 cm (Cojinete de manguito)",
+    },
+    {
+      id: 15,
+      img: "img/CD000102.jpg",
+      nombre: "Fuente de alimentación CERTIFICADA Teros TE7160, ATX, 600W, 80 Plus Bronce, 100V - 240VAC",
+      marca: "TEROS",
+      precio: 153,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "TE-7160WBRZ",
+      certificacion: "80 PLUS Bronze",
+      potencia: 600,
+      dimensiones: "14.00 x 15.00 x 8.60 cm",
+      ventilador: "12 cm",
+    },
+    {
+      id: 16,
+      img: "img/016974.jpg",
+      nombre: "FUENTE 1000W ANTRYX KIRIN GOLD EVO II (CSZ1000V5) 80 PLUS GOLD MODULAR",
+      marca: "ANTRYX",
+      precio: 679,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "KIRIN GOLD EVO II",
+      certificacion: "80 PLUS Gold",
+      potencia: 1000,
+      dimensiones: "150 x 150 x 86 mm",
+      ventilador: "120 mm",
+    },
+    {
+      id: 17,
+      img: "img/017480.jpg",
+      nombre: "FUENTE 750W DEEPCOOL PK750D (R-PK750D-FA0B-US) 80 PLUS BRONZE",
+      marca: "DEEPCOOL",
+      precio: 269,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "PK750D",
+      certificacion: "80 PLUS Bronze",
+      potencia: 750,
+      dimensiones: "",
+      ventilador: "120 mm",
+    },
+    {
+      id: 18,
+      img: "img/016151.jpg",
+      nombre: "FUENTE 1200W CORSAIR HX1200 (CP-9020140) 80 PLUS PLATINUM FULL MODULAR",
+      marca: "CORSAIR",
+      precio: 1146,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "HX1200",
+      certificacion: "80 PLUS Platinum",
+      potencia: 1200,
+      dimensiones: "",
+      ventilador: "Zero RPM Fan Mode",
+    },
+    {
+      id: 19,
+      img: "img/014359.jpg",
+      nombre: "FUENTE 1000W GIGABYTE UD1000GM (GP-UD1000GM) 80 PLUS GOLD",
+      marca: "GIGABYTE",
+      precio: 828,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "UD1000GM",
+      certificacion: "80 PLUS Gold",
+      potencia: 1000,
+      dimensiones: "",
+      ventilador: "120 mm (Cojinete hidráulico HYB)",
+    },
+    {
+      id: 20,
+      img: "img/014496.jpg",
+      nombre: "FUENTE 1250W COOLER MASTER MWE V2 (MPE-C501-AFCAG-U2) 80 PLUS GOLD FULL MODULAR",
+      marca: "COOLER MASTER",
+      precio: 1234,
+      tipo: "FUENTE DE PODER",
+      categoria: "ATX",
+      modelo: "MWE V2",
+      certificacion: "80 PLUS Gold",
+      potencia: 1250,
+      dimensiones: "180 x 150 x 86 mm",
+      ventilador: "140 mm",
+    },
+    {
+      id: 21,
+      img: "img/13GE-DT5.jpg",
+      nombre: "FUENTE DE PODER AT",
+      marca: "",
+      precio: 0,
+      tipo: "FUENTE DE PODER",
+      categoria: "AT",
+      modelo: "13GE-DT5",
+      certificacion: "",
+      potencia: 0,
+      dimensiones: "",
+      ventilador: "",
+    }
   ];
 
   function updateSelectOptions(productType) {
-    const filteredProducts = productType === 'Todos' ? products : products.filter(p => p.tipo === productType);
-    
-    const brands = [...new Set(filteredProducts.map(product => product.marca))];
-    const categories = [...new Set(filteredProducts.map(product => product.categoria))];
+    if (productType === 'Todos') {
+        // Si se selecciona "Todos", ocultar los selectores de marca y categoría
+        document.getElementById('brandFilter').style.display = 'none';
+        document.getElementById('categoryFilter').style.display = 'none';
+        brandSelect.value = '';
+        categorySelect.value = '';
+    } else {
+        // Si se selecciona un tipo específico, mostrar los selectores y actualizar las opciones
+        document.getElementById('brandFilter').style.display = 'block';
+        document.getElementById('categoryFilter').style.display = 'block';
 
-    brandSelect.innerHTML = '<option value="">Seleccionar marca</option>';
-    categorySelect.innerHTML = '<option value="">Seleccionar categoría</option>';
+        const filteredProducts = products.filter(p => p.tipo === productType);
+        
+        const brands = [...new Set(filteredProducts.map(product => product.marca))];
+        const categories = [...new Set(filteredProducts.map(product => product.categoria))];
 
-    brands.forEach(brand => {
-        const option = document.createElement('option');
-        option.value = brand;
-        option.textContent = brand;
-        brandSelect.appendChild(option);
-    });
+        brandSelect.innerHTML = '<option value="">Seleccionar marca</option>';
+        categorySelect.innerHTML = '<option value="">Seleccionar categoría</option>';
 
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category;
-        option.textContent = category;
-        categorySelect.appendChild(option);
-    });
+        brands.forEach(brand => {
+            const option = document.createElement('option');
+            option.value = brand;
+            option.textContent = brand;
+            brandSelect.appendChild(option);
+        });
+
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categorySelect.appendChild(option);
+        });
+    }
+
+    // Llamar a filterProducts para actualizar los resultados
+    filterProducts();
 }
 
-function createProductCard(product) {
+  function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-        <img src="${product.img}" alt="${product.nombre}">
-        <h2>${product.nombre}</h2>
-        <p>${product.marca}</p>
-        <p>${product.tipo} - ${product.categoria}</p>
-        <p>$${product.precio.toFixed(2)}</p>
-    `;
+            <img src="${product.img}" alt="${product.nombre}">
+            <h2>${product.nombre}</h2>
+            <p>${product.marca}</p>
+            <p>${product.tipo} - ${product.categoria}</p>
+            <p>S/. ${product.precio.toFixed(2)}</p>
+        `;
     card.addEventListener('click', () => showModal(product));
     return card;
-}
+  }
 
-function displayProducts(productsToDisplay) {
+  function displayProducts(productsToDisplay) {
     resultsContainer.innerHTML = '';
     if (productsToDisplay.length === 0) {
-        noResults.classList.remove('hidden');
+      noResults.classList.remove('hidden');
     } else {
-        noResults.classList.add('hidden');
-        productsToDisplay.forEach(product => {
-            resultsContainer.appendChild(createProductCard(product));
-        });
+      noResults.classList.add('hidden');
+      productsToDisplay.forEach(product => {
+        resultsContainer.appendChild(createProductCard(product));
+      });
     }
-}
+  }
 
-function filterProducts() {
+  function filterProducts() {
     const searchTerm = searchInput.value.toLowerCase();
     const minPrice = parseFloat(priceRangeMin.value);
     const maxPrice = parseFloat(priceRangeMax.value);
@@ -375,96 +390,96 @@ function filterProducts() {
     const selectedCategory = categorySelect.value;
 
     const filteredProducts = products.filter(product => {
-        const matchesSearch = product.nombre.toLowerCase().includes(searchTerm) ||
-                              product.marca.toLowerCase().includes(searchTerm) ||
-                              product.tipo.toLowerCase().includes(searchTerm);
-        const matchesPrice = product.precio >= minPrice && product.precio <= maxPrice;
-        const matchesType = selectedProductType === 'Todos' || product.tipo === selectedProductType;
-        const matchesBrand = selectedBrand === "" || product.marca === selectedBrand;
-        const matchesCategory = selectedCategory === "" || product.categoria === selectedCategory;
+      const matchesSearch = product.nombre.toLowerCase().includes(searchTerm) ||
+        product.marca.toLowerCase().includes(searchTerm) ||
+        product.tipo.toLowerCase().includes(searchTerm);
+      const matchesPrice = product.precio >= minPrice && product.precio <= maxPrice;
+      const matchesType = selectedProductType === 'Todos' || product.tipo === selectedProductType;
+      const matchesBrand = selectedBrand === "" || product.marca === selectedBrand;
+      const matchesCategory = selectedCategory === "" || product.categoria === selectedCategory;
 
-        return matchesSearch && matchesPrice && matchesType && matchesBrand && matchesCategory;
+      return matchesSearch && matchesPrice && matchesType && matchesBrand && matchesCategory;
     });
 
     displayProducts(filteredProducts);
-}
-
-function showModal(product) {
-  modalImage.src = product.img;
-  modalImage.alt = product.nombre;
-  modalTitle.textContent = product.nombre;
-  modalDescription.textContent = `${product.marca} - ${product.categoria}`;
-  modalPrice.textContent = `Precio: $${product.precio.toFixed(2)}`;
-  
-  if (product.tipo === "FUENTE DE PODER") {
-      modalFeatures.innerHTML = `
-          <li>Potencia: ${product.potencia}</li>
-          <li>Certificación: ${product.certificacion}</li>
-          <li>Modelo: ${product.modelo}</li>
-          <li>Dimensiones: ${product.dimensiones}</li>
-          <li>Medida de ventilador: ${product.ventilador}</li>
-      `;
-  } else {
-      modalFeatures.innerHTML = `
-          <li>Potencia: ${product.potencia}</li>
-          <li>Tensión de salida: ${product.tension_salida}</li>
-          <li>Tensión de entrada: ${product.tension_entrada}</li>
-          <li>Frecuencia: ${product.frecuencia}</li>
-          <li>Número de fases: ${product.numero_fases}</li>
-      `;
   }
 
-  modal.classList.remove('hidden');
-  setTimeout(() => {
-      modal.classList.add('show');
-  }, 10);
-}
+  function showModal(product) {
+    modalImage.src = product.img;
+    modalImage.alt = product.nombre;
+    modalTitle.textContent = product.nombre;
+    modalDescription.textContent = `${product.marca} - ${product.categoria}`;
+    modalPrice.textContent = `Precio: S/. ${product.precio.toFixed(2)}`;
 
-function hideModal() {
+    if (product.tipo === "FUENTE DE PODER") {
+      modalFeatures.innerHTML = `
+              <li>Potencia: ${product.potencia}</li>
+              <li>Certificación: ${product.certificacion}</li>
+              <li>Modelo: ${product.modelo}</li>
+              <li>Dimensiones: ${product.dimensiones}</li>
+              <li>Medida de ventilador: ${product.ventilador}</li>
+          `;
+    } else {
+      modalFeatures.innerHTML = `
+              <li>Potencia: ${product.potencia}</li>
+              <li>Tensión de salida: ${product.tension_salida}</li>
+              <li>Tensión de entrada: ${product.tension_entrada}</li>
+              <li>Frecuencia: ${product.frecuencia}</li>
+              <li>Número de fases: ${product.numero_fases}</li>
+          `;
+    }
+
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.add('show');
+    }, 10);
+  }
+
+  function hideModal() {
     modal.classList.remove('show');
     setTimeout(() => {
-        modal.classList.add('hidden');
+      modal.classList.add('hidden');
     }, 300);
-}
+  }
 
-function updatePriceLabels() {
-    minPriceLabel.textContent = `$${priceRangeMin.value}`;
-    maxPriceLabel.textContent = `$${priceRangeMax.value}`;
-}
+  function updatePriceLabels() {
+    minPriceLabel.textContent = `S/. ${priceRangeMin.value}`;
+    maxPriceLabel.textContent = `S/. ${priceRangeMax.value}`;
+  }
 
-function setMinMax() {
+  function setMinMax() {
     if (parseInt(priceRangeMin.value) > parseInt(priceRangeMax.value)) {
-        priceRangeMin.value = priceRangeMax.value;
+      priceRangeMin.value = priceRangeMax.value;
     }
     updatePriceLabels();
     filterProducts();
-}
+  }
 
-// Inicializar las opciones de los selects
+  // Inicializar las opciones de los selects
+  updateSelectOptions('Todos');
 
+  // Mostrar todos los productos al cargar la página
+  displayProducts(products);
 
-// Mostrar todos los productos al cargar la página
-displayProducts(products);
-
-// Eventos para filtrar productos
-searchInput.addEventListener('input', filterProducts);
-applyFiltersButton.addEventListener('click', filterProducts);
-priceRangeMin.addEventListener('input', setMinMax);
-priceRangeMax.addEventListener('input', setMinMax);
-productTypeRadios.forEach(radio => radio.addEventListener('change', function() {
+  // Eventos para filtrar productos
+  searchInput.addEventListener('input', filterProducts);
+  applyFiltersButton.addEventListener('click', filterProducts);
+  priceRangeMin.addEventListener('input', setMinMax);
+  priceRangeMax.addEventListener('input', setMinMax);
+  productTypeRadios.forEach(radio => radio.addEventListener('change', function () {
     updateSelectOptions(this.value);
     filterProducts();
-}));
-brandSelect.addEventListener('change', filterProducts);
-categorySelect.addEventListener('change', filterProducts);
+  }));
+  brandSelect.addEventListener('change', filterProducts);
+  categorySelect.addEventListener('change', filterProducts);
 
-closeModal.addEventListener('click', hideModal);
-window.addEventListener('click', (event) => {
+  closeModal.addEventListener('click', hideModal);
+  window.addEventListener('click', (event) => {
     if (event.target === modal) {
-        hideModal();
+      hideModal();
     }
-});
+  });
 
-// Inicializar las etiquetas de precio
-updatePriceLabels();
+  // Inicializar las etiquetas de precio
+  updatePriceLabels();
 });
